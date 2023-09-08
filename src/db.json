@@ -1,1 +1,12 @@
-{}
+{
+  "posts": [
+    {
+      "titre": "aaaa",
+      "description": "aaaa",
+      "categorie": "Sport",
+      "date": "05/02/2024",
+      "id": 1
+    }
+    
+  ]
+}
