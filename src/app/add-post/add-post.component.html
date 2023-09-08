@@ -41,7 +41,7 @@
             </div>
 
             <div class="col-6">
-              <button [disabled]="!addForm.valid" type="submit" (click)="sendPost()" class="btn btn-primary m-3">Add</button>
+              <button [disabled]="!addForm.valid" type="submit" routerLink="/list" (click)="sendPost()" class="btn btn-primary m-3">Add</button>
             </div>
           </form>
         </div>

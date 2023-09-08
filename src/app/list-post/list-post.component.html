@@ -1,4 +1,4 @@
-<div class="container">
+<div  class="container">
     <div class="table-title m-5">
       <h2>Liste de post</h2>
     </div>
@@ -16,8 +16,8 @@
           <th>{{post.titre}}</th>
           <th>
             <button type="button" (click)="delete(i)" class="btn btn-danger">Supprimer</button>
-            <button type="button" (click)="updatePost()" class="btn btn-success">Update</button>
+            <button type="button" (click)="updatePost()" routerLink="/update-post" class="btn btn-success">Update</button>
           </th>
     </table>
-    <button type="button" (click)="addPost()" class="btn btn-primary">Add Post</button>
+    <button type="button"  routerLink="/add-post" class="btn btn-primary">Add Post</button>
   </div>

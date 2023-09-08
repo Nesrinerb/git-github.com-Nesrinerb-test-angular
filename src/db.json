@@ -6,7 +6,20 @@
       "categorie": "Sport",
       "date": "05/02/2024",
       "id": 1
+    },
+    {
+      "titre": "bbb",
+      "description": "bbb",
+      "categorie": "Économie",
+      "date": "05/02/2024",
+      "id": 2
+    },
+    {
+      "titre": "ccc",
+      "description": "ccc",
+      "categorie": "Sport",
+      "date": "05/02/2024",
+      "id": 3
     }
-    
   ]
 }
