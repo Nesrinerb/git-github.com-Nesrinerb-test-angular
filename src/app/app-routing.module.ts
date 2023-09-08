@@ -8,7 +8,7 @@ const routes: Routes = [
   { path: '', redirectTo: 'list', pathMatch: 'full' },
   { path: 'list', component: ListPostComponent },
   { path: 'add-post', component: AddPostComponent },
-  { path: 'update-post', component: UpdatePostComponent },
+  { path: 'update-post/:titre', component: UpdatePostComponent },
 ];
 
 @NgModule({

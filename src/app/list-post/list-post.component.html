@@ -6,17 +6,23 @@
     <table class="table  table-hover table-bordered" id="tableau">
       <thead>
         <tr class="table-success">
-          <th>#</th>
+          <th>id</th>
           <th>Titre de post</th>
+          <th>Description</th>
+          <th>Categorie</th>
+          <th>Date</th>
           <th>Actions</th>
         </tr>
       </thead>
       <tbody id="tBody" *ngFor="let post of postArray; let i = index">
-          <th>{{i+1}}</th>
+          <th>{{post.id}}</th>
           <th>{{post.titre}}</th>
+          <th>{{post.description}}</th>
+          <th>{{post.categorie}}</th>
+          <th>{{post.date}}</th>
           <th>
             <button type="button" (click)="delete(i)" class="btn btn-danger">Supprimer</button>
-            <button type="button" (click)="updatePost()" routerLink="/update-post" class="btn btn-success">Update</button>
+            <button type="button" (click)="updatePost(post)" routerLink="/update-post" class="btn btn-success">Update</button>
           </th>
     </table>
     <button type="button"  routerLink="/add-post" class="btn btn-primary">Add Post</button>

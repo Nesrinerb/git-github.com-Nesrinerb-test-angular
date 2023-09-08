@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { AddService } from '../add.service';
 import { post } from '../post';
+import { Router } from '@angular/router';
 @Component({
   selector: 'app-list-post',
   templateUrl: './list-post.component.html',
@@ -8,7 +9,7 @@ import { post } from '../post';
 })
 export class ListPostComponent implements OnInit {
   postArray: post[] = [];
-  constructor(private _addService: AddService) {}
+  constructor(private _addService: AddService, private _router: Router) {}
   ngOnInit(): void {
     this.addPost();
   }
@@ -18,5 +19,7 @@ export class ListPostComponent implements OnInit {
   delete(i: number) {
     this.postArray.splice(i, 1);
   }
-  updatePost() {}
+  updatePost(post: post) {
+    this._router.navigate(['/update-post', post.id]);
+  }
 }

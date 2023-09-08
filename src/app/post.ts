@@ -3,4 +3,5 @@ export class post {
   description: string = '';
   categorie: string = '';
   date: string = '';
+  id: number = 0;
 }
