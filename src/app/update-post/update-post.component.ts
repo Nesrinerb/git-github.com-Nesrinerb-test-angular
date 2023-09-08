@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
 import { AddService } from '../add.service';
 import { post } from '../post';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-update-post',
@@ -10,9 +11,14 @@ import { post } from '../post';
 })
 export class UpdatePostComponent implements OnInit {
   initialArray: post[] = [];
-  constructor(private _fb: FormBuilder, private _addService: AddService) {}
+  constructor(
+    private _fb: FormBuilder,
+    private _addService: AddService,
+    private _route: ActivatedRoute
+  ) {}
 
   ngOnInit(): void {
+    // let id = parseInt(this._route.snapshot.paramMap.get('id'));
     this._addService.getPost().subscribe((data) => (this.initialArray = data));
   }
 
