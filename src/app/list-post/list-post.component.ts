@@ -17,6 +17,7 @@ export class ListPostComponent implements OnInit {
     this._addService.getPost().subscribe((data) => (this.postArray = data));
   }
   delete(i: number) {
+    this._addService.deletePost(i);
     this.postArray.splice(i, 1);
   }
   updatePost(post: post) {
